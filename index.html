@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yakov Ezra | Visual Artist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400&display=swap');
+        
+        body { font-family: 'Montserrat', sans-serif; background-color: #0A0A0A; color: #E5E5E5; overflow-x: hidden; }
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+
+        .moody-filter { filter: contrast(1.2) sepia(20%) saturate(0.8); }
+
+        .horizontal-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+        }
+        .horizontal-scroll-container::-webkit-scrollbar { display: none; }
+        
+        .scroll-item {
+            scroll-snap-align: center;
+            flex: 0 0 auto;
+        }
+
+        .cursor-custom { cursor: crosshair; }
+
+        ::selection { background: #E5E5E5; color: #0A0A0A; }
+    </style>
+</head>
+<body class="antialiased cursor-custom">
+
+    <!-- Nav -->
+    <nav class="fixed w-full top-0 z-50 px-8 py-8 flex justify-between items-center mix-blend-difference">
+        <div class="text-xl tracking-[0.3em] font-light uppercase">Yakov Ezra</div>
+        <div class="hidden md:flex gap-12 text-xs tracking-[0.2em] uppercase font-light">
+            <a href="#exhibitions" class="hover:text-gray-400 transition">Exhibitions</a>
+            <a href="#contact" class="hover:text-gray-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero / Horizontal Gallery -->
+    <main class="h-screen w-full horizontal-scroll-container items-center">
+        
+        <!-- Intro Slide -->
+        <section class="scroll-item w-screen h-full flex flex-col justify-center px-8 md:px-24 relative">
+            <div class="max-w-4xl z-10">
+                <p class="text-xs tracking-[0.4em] text-gray-500 uppercase mb-8 font-light">Visual Artist / Director</p>
+                <h1 class="text-6xl md:text-8xl serif leading-[1.1] mb-8 font-light text-white">
+                    Exploring the <br>spaces between <br><i class="text-gray-500">light and silence.</i>
+                </h1>
+                <p class="text-lg font-light text-gray-400 max-w-lg leading-relaxed">
+                    Based in Brooklyn, NY. Working across analog photography, short-form narrative film, and mixed-media portraiture.
+                </p>
+                <div class="mt-16 flex items-center gap-4 text-xs tracking-[0.2em] uppercase text-gray-500">
+                    <span>Scroll</span>
+                    <div class="w-16 h-[1px] bg-gray-500"></div>
+                </div>
+            </div>
+            <!-- Background element -->
+            <div class="absolute right-0 top-0 w-1/2 h-full bg-[#111] -z-10"></div>
+        </section>
+
+        <!-- Gallery Slide 1 -->
+        <section class="scroll-item w-[85vw] md:w-[60vw] h-[80vh] px-4 flex flex-col justify-center relative group">
+            <div class="w-full h-[80%] overflow-hidden relative">
+                <img src="https://images.pexels.com/photos/36378237/pexels-photo-36378237.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800" alt="Moody Portrait" class="w-full h-full object-cover moody-filter transform group-hover:scale-105 transition duration-1000">
+            </div>
+            <div class="flex justify-between items-center mt-6">
+                <h2 class="text-2xl serif italic">The Void Series</h2>
+                <span class="text-xs tracking-[0.2em] uppercase text-gray-500">01 / 2025</span>
+            </div>
+        </section>
+
+        <!-- Gallery Slide 2 -->
+        <section class="scroll-item w-[85vw] md:w-[60vw] h-[80vh] px-4 flex flex-col justify-center relative group mt-32">
+            <div class="w-full h-[80%] overflow-hidden relative">
+                <img src="https://images.pexels.com/photos/20780151/pexels-photo-20780151.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800" alt="Window Portrait" class="w-full h-full object-cover moody-filter transform group-hover:scale-105 transition duration-1000">
+            </div>
+            <div class="flex justify-between items-center mt-6">
+                <h2 class="text-2xl serif italic">Reflections</h2>
+                <span class="text-xs tracking-[0.2em] uppercase text-gray-500">02 / 2026</span>
+            </div>
+        </section>
+
+        <!-- Gallery Slide 3 -->
+        <section class="scroll-item w-[85vw] md:w-[60vw] h-[80vh] px-4 flex flex-col justify-center relative group">
+            <div class="w-full h-[80%] overflow-hidden relative">
+                <img src="https://images.pexels.com/photos/17886655/pexels-photo-17886655.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800" alt="Dark Contrast Portrait" class="w-full h-full object-cover moody-filter transform group-hover:scale-105 transition duration-1000">
+            </div>
+            <div class="flex justify-between items-center mt-6">
+                <h2 class="text-2xl serif italic">Isolation</h2>
+                <span class="text-xs tracking-[0.2em] uppercase text-gray-500">03 / 2026</span>
+            </div>
+        </section>
+
+        <!-- Contact Slide -->
+        <section id="contact" class="scroll-item w-screen h-full flex flex-col justify-center items-center px-8 text-center bg-[#111] border-l border-[#222]">
+            <h2 class="text-5xl md:text-7xl serif mb-10 font-light">Commissions & <br><i class="text-gray-500">Inquiries.</i></h2>
+            <p class="font-light text-gray-400 max-w-md mx-auto mb-16 text-lg leading-relaxed">
+                Currently accepting select editorial assignments and gallery exhibitions for the upcoming winter season.
+            </p>
+            <a href="mailto:contact@yakovezra.com" class="text-xl md:text-3xl font-light hover:text-gray-500 transition border-b border-white pb-2 inline-block mb-24">
+                contact@yakovezra.com
+            </a>
+            
+            <div class="flex gap-12 text-xs tracking-[0.2em] uppercase text-gray-500">
+                <p>New York</p>
+                <p>Los Angeles</p>
+                <p>London</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Mobile Scroll Hint -->
+    <div class="fixed bottom-8 w-full text-center text-xs tracking-[0.3em] uppercase text-gray-600 md:hidden pointer-events-none mix-blend-difference">
+        Swipe to Explore
+    </div>
+
+</body>
+</html>
