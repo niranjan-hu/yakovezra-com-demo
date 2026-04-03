@@ -122,5 +122,16 @@
         Swipe to Explore
     </div>
 
+    <script>
+        const scrollContainer = document.querySelector('.horizontal-scroll-container');
+        
+        scrollContainer.addEventListener('wheel', (evt) => {
+            if (evt.deltaY !== 0) {
+                evt.preventDefault();
+                scrollContainer.scrollLeft += evt.deltaY;
+            }
+        }, { passive: false });
+    </script>
+
 </body>
 </html>
